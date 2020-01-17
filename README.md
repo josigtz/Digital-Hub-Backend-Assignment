@@ -1,8 +1,12 @@
-#Digital Hub - Backend Assignment - CP
-##Followed approach 
-###Stack
+# Digital Hub - Backend Assignment - CP
+
+## Followed approach 
+
+### Stack
+
 This application was developed using Spring boot, Maven and Kotlin as main technologies. <br/>
-###Assumptions
+
+### Assumptions
 Code was written with the assumption that there is another service in charge to made CRUD operations over Account entities. 
 We initialize the H2 Database with the following accounts to mock a real scenario:
 ```bash
@@ -39,7 +43,7 @@ We initialize the H2 Database with the following accounts to mock a real scenari
 ```
 <br/>
 
-###Code highlights
+### Code highlights
 Based on the previous statement, I built ***TransactionService*** 
 to provide the required functionality to transfer money between accounts.<br/>
 The main functions inside ***TransactionService*** are _Validator_, _ModifyBalance_ and _SendMoney_ functions:
@@ -60,9 +64,9 @@ add and reduce the corresponding amount from each account.
 <br/>
 To give more detail about a transaction rejection, a header named "error" is added to Error ResponseEntity with the reason.
 
-##How to run Application:
+## How to run Application:
 In order to run the application, you may execute the command ***"java -jar transactions-0.0.1-SNAPSHOT.jar"*** <br/>
 Then access to localhost:8080/api and you can interact with documented methods provided by *springdoc-openapi-ui* library
 
-##Repository
+## Repository
 [josigtz/Digital-Hub-Backend-Assignment](https://github.com/josigtz/Digital-Hub-Backend-Assignment)
