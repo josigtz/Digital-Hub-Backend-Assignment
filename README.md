@@ -52,8 +52,7 @@ The main functions inside ***TransactionService*** are _Validator_, _ModifyBalan
 1. Validator: this function verifies the following conditions: 
 <br/>a) Accounts exist 
 <br/>b) Accounts' balance is not under $-500 before and after executing transactions 
-<br/>
-<br/>
+
 2. ModifyBalance: updates balance attribute for a given account adding or reducing the amount 
 <br/>
 <br/>
