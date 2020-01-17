@@ -59,7 +59,6 @@ The main functions inside ***TransactionService*** are _Validator_, _ModifyBalan
 If the validation fails Error ResponseEntity is thrown, otherwise *ModifyBalance* is called to 
 add and reduce the corresponding amount from each account. 
 <br/>
-<br/>
 To give more detail about a transaction rejection, a header named "error" is added to Error ResponseEntity with the reason.
 
 ## How to run Application:
