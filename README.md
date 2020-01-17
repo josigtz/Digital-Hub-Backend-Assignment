@@ -54,8 +54,7 @@ The main functions inside ***TransactionService*** are _Validator_, _ModifyBalan
 <br/>b) Accounts' balance is not under $-500 before and after executing transactions 
 
 2. ModifyBalance: updates balance attribute for a given account adding or reducing the amount 
-<br/>
-<br/>
+
 3. SendMoney: first call *Validator* to check if the transactions is valid.
 If the validation fails Error ResponseEntity is thrown, otherwise *ModifyBalance* is called to 
 add and reduce the corresponding amount from each account. 
