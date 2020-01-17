@@ -49,16 +49,16 @@ to provide the required functionality to transfer money between accounts.<br/>
 The main functions inside ***TransactionService*** are _Validator_, _ModifyBalance_ and _SendMoney_ functions:
 <br/>
 
-2. Validator: this function verifies the following conditions: 
+1. Validator: this function verifies the following conditions: 
 <br/>a) Accounts exist 
 <br/>b) Accounts' balance is not under $-500 before and after executing transactions 
 <br/>
 <br/>
-3. ModifyBalance: updates balance attribute for a given account adding or reducing the amount 
-<br>
-<br>
-1. SendMoney: first call **Validator** to check if the transactions is valid.
-If the validation fails Error ResponseEntity is thrown, otherwise **ModifyBalance** is called to 
+2. ModifyBalance: updates balance attribute for a given account adding or reducing the amount 
+<br/>
+<br/>
+3. SendMoney: first call *Validator* to check if the transactions is valid.
+If the validation fails Error ResponseEntity is thrown, otherwise *ModifyBalance* is called to 
 add and reduce the corresponding amount from each account. 
 <br/>
 <br/>
