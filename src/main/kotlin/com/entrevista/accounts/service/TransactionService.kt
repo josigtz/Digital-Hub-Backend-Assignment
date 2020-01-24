@@ -50,6 +50,8 @@ class TransactionService (@Autowired val transactionRepository: TransactionRepos
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("error","Invalid sender account number").build()
         else if(!receiverAccount.isPresent)
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("error","Invalid receiver account number").build()
+        else if(transaction.amount < 0)
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("error","Invalid ammount, not negative ammounts are accepted").build()
         //Dont let make transaction if balance is lower than -500 or is going to be lower than -500 after transaction
         if(senderAccount.get().balance < -500 || (senderAccount.get().balance - transaction.amount) < -500)
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).header("error","SenderAccount has not enough money").build()
